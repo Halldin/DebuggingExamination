@@ -5,15 +5,15 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPoints;
+    [SerializeField] float spawnDelay, spawnFrequency;
     [SerializeField] GameObject prefab;
     
-    // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Dothis", 1, .5f);
+        InvokeRepeating("SpawnOrganism", spawnDelay, spawnFrequency);
     }
 
-    void Dothis()
+    void SpawnOrganism()
     {
         Vector3 point = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
         Instantiate(prefab, point, Quaternion.identity);

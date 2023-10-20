@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
     [SerializeField] float cameraBoundaries;
+    [SerializeField] Transform target;
+    
     void Update()
     {
-        Transform player = GameObject.FindWithTag("Player").transform;
-        float y = Mathf.Clamp(player.position.y, -cameraBoundaries, cameraBoundaries);
+        float y = Mathf.Clamp(target.position.y, -cameraBoundaries, cameraBoundaries);
 
         transform.position = new Vector3(0, y, -10);
     }
