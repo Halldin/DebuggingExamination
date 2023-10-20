@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2140556114261425653}
   - component: {fileID: 8795477902948304137}
   - component: {fileID: 4400628953036969553}
-  - component: {fileID: 7159040863515169126}
   - component: {fileID: 2289504915890920864}
   - component: {fileID: 5121944781596682826}
+  - component: {fileID: 4177612108125573989}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.26, y: 8.13, z: 0}
-  m_LocalScale: {x: 3.7452, y: 3.7452, z: 3.7452}
+  m_LocalScale: {x: 2, y: 2, z: 3.7452}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,19 +115,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7159040863515169126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546301220222852241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c35c7b1f7ea7c418064cd81cc77a34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomStepSize: 0.1
 --- !u!114 &2289504915890920864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,11 +136,6 @@ MonoBehaviour:
   - {fileID: -713927838875379090, guid: b239ac5fbf73abb438d02e12c91ff47b, type: 3}
   - {fileID: -4941818727305674587, guid: b239ac5fbf73abb438d02e12c91ff47b, type: 3}
   - {fileID: 3777368489809627076, guid: b239ac5fbf73abb438d02e12c91ff47b, type: 3}
-  - {fileID: 21300000, guid: 7388c4b05e93a8846b661ccbe8ba3f88, type: 3}
-  - {fileID: 21300000, guid: bf5b3899c04696446bc7e0a1dfdcbe31, type: 3}
-  - {fileID: 21300000, guid: 317778e1d3582e649bfb3d99683b3cbc, type: 3}
-  - {fileID: 21300000, guid: d571a88a2f2ea6649865dcef5825c6bb, type: 3}
-  - {fileID: 21300000, guid: 190cd272fb32d774c8d91c6874ebdf3c, type: 3}
   spriteRenderer: {fileID: 8795477902948304137}
 --- !u!114 &5121944781596682826
 MonoBehaviour:
@@ -171,3 +153,19 @@ MonoBehaviour:
   movementSpeed: 0.1
   rotationSpeed: 0.1
   wobbleAmmount: 0.25
+--- !u!114 &4177612108125573989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546301220222852241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58545f349284ce4aa68e7e90e25611e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: 1
+  movementSpeed: 0
+  rotationSpeed: 0.1
+  wobbleAmmount: 0.05

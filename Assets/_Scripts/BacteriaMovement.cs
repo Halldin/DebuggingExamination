@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BacteriaMovement : MonoBehaviour
 {
-    public Vector3 BaseScale {get; set;}
+    public Vector3 BaseScale {private get; set;}
     [SerializeField] bool movement;
     [SerializeField] float movementSpeed, rotationSpeed;
     [SerializeField] float wobbleAmmount;
@@ -15,10 +15,6 @@ public class BacteriaMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Rotation
-        Vector3 rotationVector = new Vector3(0, 0, rotationSpeed);
-        transform.Rotate(rotationVector, Space.Self);
-
         //Movement
         if(movement){
             Vector3 movementVector = new Vector3(
@@ -27,6 +23,10 @@ public class BacteriaMovement : MonoBehaviour
 
             transform.Translate(movementVector);
         }
+
+        //Rotation
+        Vector3 rotationVector = new Vector3(0, 0, rotationSpeed);
+        transform.Rotate(rotationVector, Space.Self);
 
         //Wobble
         Vector3 randomWobble = new Vector3(

@@ -129,8 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growthAmmount: 0.25
   shrinkAmmount: 0.25
-  maxSize: 2
+  maxSize: 1.5
   minSize: 0.5
+  bacteriaMovemet: {fileID: 6735921143144292510}
 --- !u!70 &1232276314612061190
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,4 +182,4 @@ MonoBehaviour:
   movement: 1
   movementSpeed: 0.15
   rotationSpeed: 0.1
-  wobbleAmmount: 0.25
+  wobbleAmmount: 0.075

@@ -6,19 +6,18 @@ public class GreenBacteria : MonoBehaviour
 {
     [SerializeField] float growthAmmount, shrinkAmmount;
     [SerializeField] float maxSize, minSize;
-
-    BacteriaMovement bacteriaMovemet;
-
-    void Start(){
-        bacteriaMovemet = GetComponent<BacteriaMovement>();
-    }
+    [SerializeField] BacteriaMovement bacteriaMovemet;
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        if (other.gameObject.tag == "Enemy") EatOrganism(other.gameObject, growthAmmount);
-        if (other.gameObject.tag == "Antidote") EatOrganism(other.gameObject, -shrinkAmmount);
+        //Trigger EatOrganism if object collides with relevant organism.
+        string tag = other.gameObject.tag;
+
+        if (tag == "Enemy") EatOrganism(other.gameObject, growthAmmount);
+        else if (tag == "Antidote") EatOrganism(other.gameObject, -shrinkAmmount);
     }
 
+    //When the bacteria eats a relevant organism it should shrink or grow accordingly.
     void EatOrganism(GameObject organism, float scaleChange){
         Destroy(organism);
 
